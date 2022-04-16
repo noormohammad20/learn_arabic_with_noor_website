@@ -1,0 +1,13 @@
+.banner-title {
+    color: #972d15ba;
+    font-size: 50px;
+}
+
+.banner-title:hover {
+    color: coral;
+}
+
+.banner {
+    height: 83vh;
+    width: 100%;
+}
