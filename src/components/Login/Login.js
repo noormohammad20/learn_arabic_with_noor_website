@@ -1,20 +1,26 @@
 import React, { useRef } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import auth from '../../firebase.init'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Social from '../Social/Social'
 
 const Login = () => {
+
+    const emailRef = useRef('')
+    const passwordRef = useRef('')
+    const location = useLocation()
+    const navigate = useNavigate()
+
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth)
-    const emailRef = useRef('')
-    const passwordRef = useRef('')
-    const location = useLocation()
-    const navigate = useNavigate()
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth)
 
     let from = location.state?.from?.pathname || "/"
 
@@ -32,6 +38,16 @@ const Login = () => {
     const navigateSignup = () => {
         navigate('/register')
     }
+    const resetPassword = async () => {
+        const email = emailRef.current.value
+        if (email) {
+            await sendPasswordResetEmail(email)
+            toast('sent email for reset your password ! please check your email')
+        }
+        else {
+            toast('please enter your email address')
+        }
+    }
     return (
         <div>
             <h2 className='text-primary my-3'>Please Login</h2>
@@ -48,6 +64,9 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New in My Site ? <Link className='text-decoration-none' to='/signup' onClick={navigateSignup}>Please Signup</Link></p>
+            <p>Forgot password? <button className='text-decoration-none btn btn-link' onClick={resetPassword}>reset your password</button></p>
+            <Social></Social>
+            <ToastContainer></ToastContainer>
         </div>
     )
 }
