@@ -15,6 +15,7 @@ import Signup from './components/Signup/Signup'
 function App() {
   return (
     <div className="App">
+
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
@@ -31,6 +32,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+
     </div>
   )
 }

@@ -47,7 +47,7 @@ const Signup = () => {
         return <p className='text-danger'> {error?.message} </p>
     }
     return (
-        <div>
+        <div style={{ minHeight: '85vh' }}>
             <h2 className='text-primary my-3'>Please SignUp</h2>
             <Form className='w-50 mx-auto' onSubmit={handleSignup}>
                 <Form.Group className="mb-4" controlId="formBasicText">
