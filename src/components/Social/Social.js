@@ -6,6 +6,7 @@ import auth from '../../firebase.init'
 const Social = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth)
     const navigate = useNavigate()
+
     if (user) {
         navigate('/home')
     }
