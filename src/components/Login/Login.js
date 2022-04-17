@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
@@ -6,6 +6,7 @@ import auth from '../../firebase.init'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Social from '../Social/Social'
+import Loading from '../Loading/Loading'
 
 const Login = () => {
 
@@ -24,10 +25,20 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/"
 
-    if (user) {
-        navigate(from, { replace: true })
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true })
+        }
+    }, [user])
+
+    if (loading || sending) {
+        return <Loading></Loading>
     }
 
+    let errorMessage
+    if (error) {
+        errorMessage = <p className='text-danger'>{error?.message}</p>
+    }
     const handleLogin = e => {
         e.preventDefault()
         const email = emailRef.current.value
@@ -63,6 +74,7 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            {errorMessage}
             <p>New in My Site ? <Link className='text-decoration-none' to='/signup' onClick={navigateSignup}>Please Signup</Link></p>
             <p>Forgot password? <button className='text-decoration-none btn btn-link' onClick={resetPassword}>reset your password</button></p>
             <Social></Social>
