@@ -1,8 +1,7 @@
 .service {
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+    border: 1px solid #8080801a;
+    border-radius: 20px;
+    padding-bottom: 15px;
 }
 
 .service img {

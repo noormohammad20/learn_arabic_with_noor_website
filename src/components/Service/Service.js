@@ -8,12 +8,12 @@ const Service = ({ service }) => {
         navigate(`/service/${id}`)
     }
     return (
-        <div className='service ' >
-            <img className='w-100' src={img} alt="" />
+        <div className='service me-5 card-body d-flex  flex-column rounded ' >
+            <img className='w-100 rounded' src={img} alt="" />
             <h2 className='text-info'>{name}</h2>
             <h5>{price}</h5>
             <p>{description}</p>
-            <button className='btn btn-primary w-50' onClick={() => navigateToCheckout(id)}>Checkout</button>
+            <button style={{ marginTop: 'auto' }} className='btn btn-primary align-self-end btn btn-lg btn-block ' onClick={() => navigateToCheckout(id)}>Checkout</button>
         </div>
     )
 }

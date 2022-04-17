@@ -3,7 +3,7 @@ import React from 'react'
 const Blogs = () => {
     return (
         <article style={{ minHeight: '85vh' }}>
-            <h2 className='mb-3'>অথোরাইজেশন এবং অথেন্টিকেশন এর মধ্যে পার্থক্য কি?</h2>
+            <h2 className='mb-3 mt-5'>অথোরাইজেশন এবং অথেন্টিকেশন এর মধ্যে পার্থক্য কি?</h2>
             <h5 className='mb-4'>
                 অথেন্টিকেশন হল কোনো application এ ইউজার আইডি এবং পাসওয়ার্ড এর মাধ্যমে নিজের পরিচয়কে ভেরিফাই করা।
 
