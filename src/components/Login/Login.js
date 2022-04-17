@@ -56,7 +56,15 @@ const Login = () => {
             toast('sent email for reset your password ! please check your email')
         }
         else {
-            toast('please enter your email address')
+            toast.warn(' Please Enter Your Email Address!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
         }
     }
     return (
@@ -78,7 +86,17 @@ const Login = () => {
             <p>New in My Site ? <Link className='text-decoration-none' to='/signup' onClick={navigateSignup}>Please Signup</Link></p>
             <p>Forgot password? <button className='text-decoration-none btn btn-link' onClick={resetPassword}>reset your password</button></p>
             <Social></Social>
-            <ToastContainer></ToastContainer>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     )
 }

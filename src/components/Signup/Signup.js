@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from 'react-router-dom'
 import auth from '../../firebase.init'
+import Loading from '../Loading/Loading'
 import Social from '../Social/Social'
 
 const Signup = () => {
@@ -35,11 +36,21 @@ const Signup = () => {
     const navigateLogin = () => {
         navigate('/login')
     }
+    if (user) {
+        console.log(user)
+    }
+    if (loading) {
+        return <Loading></Loading>
+    }
+    let signupError
+    if (error) {
+        return <p className='text-danger'> {error?.message} </p>
+    }
     return (
         <div>
-            <h2 className='text-primary my-3'>Please Register</h2>
+            <h2 className='text-primary my-3'>Please SignUp</h2>
             <Form className='w-50 mx-auto' onSubmit={handleSignup}>
-                <Form.Group className="mb-4" controlId="formBasicEmail">
+                <Form.Group className="mb-4" controlId="formBasicText">
                     <Form.Control ref={nameRef} type="text" placeholder="Enter Your Name" required />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
@@ -49,13 +60,14 @@ const Signup = () => {
                 <Form.Group className="mb-4" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="formBasicPassword">
+                <Form.Group className="mb-4" controlId="formBasicConfirmPassword">
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
                 <Button className='w-50' variant="primary" type="submit">
                     Signup
                 </Button>
             </Form>
+            {signupError}
             <p>Already have an Account? ? <Link className='text-decoration-none' to='/login' onClick={navigateLogin}>Please login</Link></p>
             <Social></Social>
         </div>
