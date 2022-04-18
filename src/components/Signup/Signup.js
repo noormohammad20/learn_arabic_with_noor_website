@@ -26,11 +26,12 @@ const Signup = () => {
         const password = passwordRef.current.value
         const confirmPassword = confirmPasswordRef.current.value
 
-        createUserWithEmailAndPassword(email, password)
 
         if (password !== confirmPassword) {
-            return alert('Password Not Matched')
+            return alert('Your Password Not Matched')
         }
+        createUserWithEmailAndPassword(email, password)
+
         navigate('/home')
     }
     const navigateLogin = () => {
