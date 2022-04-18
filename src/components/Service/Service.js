@@ -13,7 +13,7 @@ const Service = ({ service }) => {
             <h2 className='text-info'>{name}</h2>
             <h5>{price}</h5>
             <p>{description}</p>
-            <button style={{ marginTop: 'auto' }} className='btn btn-primary align-self-end btn btn-lg btn-block ' onClick={() => navigateToCheckout(id)}>Checkout</button>
+            <button style={{ marginTop: 'auto' }} className='checkout-btn mx-auto ' onClick={() => navigateToCheckout(id)}>Checkout</button>
         </div>
     )
 }
