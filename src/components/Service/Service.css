@@ -1,5 +1,5 @@
 .service {
-    height: 580px;
+    height: 480px;
     border: 1px solid #8080801a;
     border-radius: 20px;
     padding-bottom: 15px;
@@ -7,8 +7,9 @@
     box-shadow: 5px 5px 5px 5px #f7f1f1;
 }
 
-.service img {
-    height: 300px;
+.img {
+    height: 200px;
+    border-radius: 40px;
 }
 
 .service-name {
