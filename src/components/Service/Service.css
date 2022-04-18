@@ -2,10 +2,23 @@
     border: 1px solid #8080801a;
     border-radius: 20px;
     padding-bottom: 15px;
+    background-color: lightgray;
+    box-shadow: 5px 5px 5px 5px #f7f1f1;
 }
 
 .service img {
     height: 300px;
+}
+
+.service-name {
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+
+.service-price {
+    font-weight: 800;
+    font-size: 30px;
 }
 
 .checkout-btn {
@@ -16,4 +29,9 @@
     padding-left: 1.5rem;
     border: none;
     width: 50%;
+}
+
+.checkout-btn:hover {
+    background-color: coral;
+    ;
 }
