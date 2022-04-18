@@ -5,3 +5,7 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+
+.reviews-title:hover {
+    color: #131212;
+}

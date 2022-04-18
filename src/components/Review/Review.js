@@ -6,7 +6,7 @@ const Review = ({ review }) => {
 
     return (
         <Col>
-            <Card className='card'>
+            <Card className='card bg-light'>
                 <Card.Img
                     style={{ height: '90px', width: '90px' }}
                     className='img-fluid rounded-circle img-thumbnail mx-auto' variant="top" src={img} />
