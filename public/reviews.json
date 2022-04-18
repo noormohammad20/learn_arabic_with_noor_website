@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "review": "Assalamualaikum I would Like to Say excellent service and wonderful quran learning platform for all levels of students. certainly full satisfaction about quran class and flexible class schedule. thanks a lot noor sir .\r\n",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcVJp5xkdF0jeO1D2Jt3x2IJf3DhLA8O05zD3XXP3bXrneLQIXDPjgWv32q5KA6Fw2WlM&usqp=CAU",
+        "address": "Virgin Islands",
+        "name": "Nusrat jhahan"
+    },
+    {
+        "id": "2",
+        "description": "I really Like The quran Classes For my Children. our teacher is very patient for our children alhamdulillah . which make the children make him serious . and learn so fast and easily.\r\n",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1FIltN296MVQdwCrpbOGZJbPxj5wgBy2qhg&usqp=CAU",
+        "address": "Dhaka",
+        "name": "Sumon Patowari"
+    },
+    {
+        "id": "3",
+        "description": "Best arabic classes and best quran classes i have ever seen mashallah. it's very dificult to find so professional and worthy quran learning . the teacher mashallah extremely polite and punctual .never missed a class . and my children are very comfortable with him. thank you Noor mohammad sir .\r\n",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhozhM2SRHzQ2Z1pEbhXypDDkXfTraguFJctcxWVY230Zt9EgJE-79h4_nabLLwmFkdLI&usqp=CAU",
+        "address": "London",
+        "name": "Mou Akter"
+    },
+    {
+        "id": "4",
+        "description": "Assalamualaikum ! I would Like to express My gratefulness for teaching me the quran in simple and easy way through online. and i have also learned real accent of arabic with pleasure. best regards.\r\n",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzfNwum1B4QLGbAITyCNDBXazMPhiYmU_MjQ&usqp=CAU",
+        "address": "canada",
+        "name": "Selim Reza"
+    }
+]
